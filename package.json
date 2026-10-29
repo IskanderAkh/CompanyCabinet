@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
     "start": "cross-env NODE_ENV=production node backend/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "seed": "node backend/seed.js"
   },
   "dependencies": {
     "axios": "^1.21.0",
@@ -33,6 +34,7 @@
     "uuid": "^14.0.3"
   },
   "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
     "cross-env": "^10.1.0",
     "nodemon": "^3.1.14"
   }

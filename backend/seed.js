@@ -52,7 +52,6 @@ async function seed() {
         name: 'Demo Owner',
         email: 'demo@demo.com',
         password: await bcrypt.hash('demo123', 10),
-        role: 'owner',
     });
 
     // 3. Водители

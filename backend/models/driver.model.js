@@ -12,4 +12,5 @@ const driverSchema = new mongoose.Schema(
 
 driverSchema.index({ company: 1, name: 1 });
 
-export default mongoose.model('Driver', driverSchema);
+const Driver = mongoose.model('Driver', driverSchema);
+export default Driver;

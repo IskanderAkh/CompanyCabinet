@@ -17,4 +17,5 @@ const invoiceSchema = new mongoose.Schema(
 
 invoiceSchema.index({ company: 1, periodFrom: -1 });
 
-export default mongoose.model('Invoice', invoiceSchema);
+const Invoice = mongoose.model('Invoice', invoiceSchema);
+export default Invoice;

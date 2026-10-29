@@ -14,4 +14,5 @@ const stationSchema = new mongoose.Schema(
 
 stationSchema.index({ state: 1 });
 
-export default mongoose.model('Station', stationSchema);
+const Station = mongoose.model('Station', stationSchema);
+export default Station;

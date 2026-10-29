@@ -16,4 +16,5 @@ const cardSchema = new mongoose.Schema(
 
 cardSchema.index({ company: 1, status: 1 });
 
-export default mongoose.model('Card', cardSchema);
+const Card = mongoose.model('Card', cardSchema);
+export default Card;

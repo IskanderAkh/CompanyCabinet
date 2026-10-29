@@ -22,4 +22,5 @@ transactionSchema.index({ company: 1, driver: 1, date: -1 });
 transactionSchema.index({ company: 1, card: 1, date: -1 });
 transactionSchema.index({ invoice: 1 });
 
-export default mongoose.model('Transaction', transactionSchema);
+const Transaction = mongoose.model('Transaction', transactionSchema);
+export default Transaction;

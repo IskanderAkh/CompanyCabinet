@@ -1,4 +1,4 @@
-import Company from '../modules/company.module.js';
+import Company from '../models/company.model.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { httpError } from '../utils/httpError.js';
 import { pick } from '../utils/query.js';

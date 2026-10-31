@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import User from '../modules/user.module.js';
-import Company from '../modules/company.module.js';
+import User from '../models/user.model.js';
+import Company from '../models/company.model.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { httpError } from '../utils/httpError.js';
 
@@ -50,7 +50,7 @@ export const register = asyncHandler(async (req, res) => {
       password: await bcrypt.hash(password, 10),
     });
   } catch (err) {
-    await Company.deleteOne({ _id: company._id }); // не оставляем пустую компанию
+    await Company.deleteOne({ _id: company._id }); 
     throw err;
   }
 
